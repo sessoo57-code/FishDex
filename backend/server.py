@@ -50,7 +50,7 @@ class UnlockFishRequest(BaseModel):
     equipment: str
     date: str
 
-# Italian Fish Database - 150+ species
+# Italian Fish Database - simplified for stability
 FISH_DATABASE = [
     # PESCI MARINI (Mare)
     {
@@ -58,70 +58,70 @@ FISH_DATABASE = [
         "scientificName": "Dicentrarchus labrax", 
         "habitat": "mare", 
         "description": "Predatore marino molto apprezzato, si trova vicino alle coste rocciose e sabbiose.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Spigola"
     },
     {
         "name": "Orata", 
         "scientificName": "Sparus aurata", 
         "habitat": "mare",
         "description": "Pesce pregiato con caratteristica macchia dorata tra gli occhi, vive in fondali sabbiosi.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Orata"
     },
     {
         "name": "Tonno", 
         "scientificName": "Thunnus thynnus", 
         "habitat": "mare",
         "description": "Grande pesce pelagico, il re del Mediterraneo. Può raggiungere dimensioni enormi.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Tonno"
     },
     {
         "name": "Ricciola", 
         "scientificName": "Seriola dumerili", 
         "habitat": "mare",
         "description": "Potente predatore pelagico, molto combattivo quando allamato.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Ricciola"
     },
     {
         "name": "Pesce serra", 
         "scientificName": "Pomatomus saltatrix", 
         "habitat": "mare",
         "description": "Predatore vorace con denti affilati, caccia in branchi numerosi.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Serra"
     },
     {
         "name": "Dentice", 
         "scientificName": "Dentex dentex", 
         "habitat": "mare",
         "description": "Pesce pregiato con potenti mascelle, vive su fondali rocciosi.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Dentice"
     },
     {
         "name": "Sarago", 
         "scientificName": "Diplodus sargus", 
         "habitat": "mare",
         "description": "Pesce comune nei porti e nelle scogliere, riconoscibile dalle bande verticali.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Sarago"
     },
     {
         "name": "Rombo", 
         "scientificName": "Psetta maxima", 
         "habitat": "mare",
         "description": "Pesce piatto che vive nascosto sui fondali sabbiosi, eccellente mimesi.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Rombo"
     },
     {
         "name": "Sogliola", 
         "scientificName": "Solea solea", 
         "habitat": "mare",
         "description": "Pesce piatto bentonico, vive su fondali sabbiosi e fangosi.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Sogliola"
     },
     {
         "name": "Cefalo", 
         "scientificName": "Mugil cephalus", 
         "habitat": "mare",
         "description": "Pesce eurialino che si adatta sia in mare che in acqua dolce.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/4A90E2/FFFFFF?text=Cefalo"
     },
 
     # PESCI D'ACQUA DOLCE - FIUMI (Fiume)
@@ -130,14 +130,35 @@ FISH_DATABASE = [
         "scientificName": "Esox lucius", 
         "habitat": "fiume",
         "description": "Predatore d'acqua dolce per eccellenza, con corpo affusolato e grandi mascelle.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/10B981/FFFFFF?text=Luccio"
     },
     {
         "name": "Carpa", 
         "scientificName": "Cyprinus carpio", 
         "habitat": "fiume",
         "description": "Grande cyprinide, può raggiungere dimensioni notevoli. Molto resistente.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/10B981/FFFFFF?text=Carpa"
+    },
+    {
+        "name": "Barbo", 
+        "scientificName": "Barbus barbus", 
+        "habitat": "fiume",
+        "description": "Pesce di fondo con barbigli, predilige acque correnti e ossigenate.",
+        "referenceImage": "https://via.placeholder.com/200x100/10B981/FFFFFF?text=Barbo"
+    },
+    {
+        "name": "Cavedano", 
+        "scientificName": "Squalius cephalus", 
+        "habitat": "fiume",
+        "description": "Cyprinide comune nei fiumi italiani, molto adattabile.",
+        "referenceImage": "https://via.placeholder.com/200x100/10B981/FFFFFF?text=Cavedano"
+    },
+    {
+        "name": "Trota fario", 
+        "scientificName": "Salmo trutta", 
+        "habitat": "fiume",
+        "description": "Regina dei torrenti di montagna, con caratteristiche macchie colorate.",
+        "referenceImage": "https://via.placeholder.com/200x100/10B981/FFFFFF?text=Trota"
     },
 
     # PESCI D'ACQUA DOLCE - LAGHI (Lago)
@@ -146,33 +167,48 @@ FISH_DATABASE = [
         "scientificName": "Perca fluviatilis", 
         "habitat": "lago",
         "description": "Predatore con caratteristiche bande verticali scure, comune nei laghi.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="
+        "referenceImage": "https://via.placeholder.com/200x100/8B5CF6/FFFFFF?text=Persico"
     },
     {
         "name": "Tinca", 
         "scientificName": "Tinca tinca", 
         "habitat": "lago",
         "description": "Pesce bentonico con corpo tozzo, vive in acque stagnanti ricche di vegetazione.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj"><path d="M20 50c0-10 10-20 30-20s50 20 80 20c20 0 40-10 60-10s20 10 0"/></svg>"
+        "referenceImage": "https://via.placeholder.com/200x100/8B5CF6/FFFFFF?text=Tinca"
     },
     {
         "name": "Alborella", 
         "scientificName": "Alburnus alburnus", 
         "habitat": "lago",
         "description": "Piccolo pesce argentato che forma grandi branchi in superficie.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj><path d="M20 50c0-10 10-20 30-20s50 20 80 20c20 0 40-10 60-10s20 10 0"/></svg>"
+        "referenceImage": "https://via.placeholder.com/200x100/8B5CF6/FFFFFF?text=Alborella"
+    },
+    {
+        "name": "Scardola", 
+        "scientificName": "Scardinius erythrophthalmus", 
+        "habitat": "lago",
+        "description": "Cyprinide dalle pinne rossastre, preferisce acque calme e vegetate.",
+        "referenceImage": "https://via.placeholder.com/200x100/8B5CF6/FFFFFF?text=Scardola"
+    },
+    {
+        "name": "Coregone", 
+        "scientificName": "Coregonus lavaretus", 
+        "habitat": "lago",
+        "description": "Salmonide di lago, molto apprezzato in cucina.",
+        "referenceImage": "https://via.placeholder.com/200x100/8B5CF6/FFFFFF?text=Coregone"
     },
 ]
 
-# Extend database to 150+ fish
-for i in range(15, 151):
+# Extend database to 150+ fish with generated entries
+for i in range(21, 151):
     habitat = ['mare', 'fiume', 'lago'][i % 3]
+    color = {'mare': '4A90E2', 'fiume': '10B981', 'lago': '8B5CF6'}[habitat]
     FISH_DATABASE.append({
         "name": f"Pesce {i}",
         "scientificName": f"Piscis species{i}",
         "habitat": habitat,
         "description": f"Descrizione del pesce numero {i} dell'habitat {habitat}.",
-        "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj><path d="M20 50c0-10 10-20 30-20s50 20 80 20c20 0 40-10 60-10s20 10 0"/></svg>"
+        "referenceImage": f"https://via.placeholder.com/200x100/{color}/FFFFFF?text=Pesce{i}"
     })
 
 # Initialize fish database on startup
@@ -226,8 +262,7 @@ async def get_fish(fish_id: str):
 async def unlock_fish(fish_id: str, catch_data: UnlockFishRequest):
     """Unlock a fish with user catch data"""
     try:
-        # Here you could store user catch data in a separate collection
-        # For now, we just acknowledge the unlock
+        # Store user catch data in a separate collection
         result = await db.user_catches.insert_one({
             "_id": str(uuid.uuid4()),
             "fish_id": fish_id,
