@@ -48,25 +48,23 @@ export default function Index() {
       onPress={() => handleFishPress(item)}
     >
       <View style={styles.fishImageContainer}>
-        {item.isUnlocked ? (
-          <Image 
-            source={{ uri: item.userCatch?.photo || item.referenceImage }} 
-            style={styles.fishImage}
-          />
-        ) : (
-          <View style={styles.lockedFishContainer}>
-            <Ionicons name="fish" size={40} color="#9ca3af" />
-            <Text style={styles.lockedText}>???</Text>
+        <Image 
+          source={{ uri: item.isUnlocked ? (item.userCatch?.photo || item.referenceImage) : item.referenceImage }} 
+          style={styles.fishImage}
+        />
+        {!item.isUnlocked && (
+          <View style={styles.lockedOverlay}>
+            <Ionicons name="lock-closed" size={24} color="#ffffff" />
           </View>
         )}
       </View>
       
       <View style={styles.fishInfo}>
         <Text style={styles.fishName}>
-          {item.isUnlocked ? item.name : '???'}
+          {item.name}
         </Text>
         <Text style={styles.fishScientific}>
-          {item.isUnlocked ? item.scientificName : 'Specie sconosciuta'}
+          {item.isUnlocked ? item.scientificName : 'Da catturare'}
         </Text>
         <View style={styles.habitatBadge}>
           <Text style={[styles.habitatText, { color: getHabitatColor(item.habitat) }]}>
