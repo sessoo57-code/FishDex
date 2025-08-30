@@ -6,10 +6,10 @@ import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
 
 // Screens
-import EncyclopediaScreen from './screens/EncyclopediaScreen';
-import CatchScreen from './screens/CatchScreen';
-import CollectionsScreen from './screens/CollectionsScreen';
-import ProfileScreen from './screens/ProfileScreen';
+import EncyclopediaScreen from '../screens/EncyclopediaScreen';
+import CatchScreen from '../screens/CatchScreen';
+import CollectionsScreen from '../screens/CollectionsScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
