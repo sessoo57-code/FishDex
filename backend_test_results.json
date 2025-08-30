@@ -1,0 +1,43 @@
+{
+  "total_tests": 5,
+  "passed": 5,
+  "failed": 0,
+  "success_rate": "100.0%",
+  "results": [
+    {
+      "test": "GET /api/fish",
+      "success": true,
+      "message": "Successfully retrieved 150 fish species",
+      "details": null,
+      "timestamp": "2025-08-30T18:41:38.742846"
+    },
+    {
+      "test": "Fish Data Structure",
+      "success": true,
+      "message": "All required fields present with Italian fish names",
+      "details": null,
+      "timestamp": "2025-08-30T18:41:38.744040"
+    },
+    {
+      "test": "Habitat Filtering",
+      "success": true,
+      "message": "Fish found in all habitats - Mare: 54, Fiume: 48, Lago: 48",
+      "details": null,
+      "timestamp": "2025-08-30T18:41:38.744116"
+    },
+    {
+      "test": "Unlock Fish Endpoint",
+      "success": true,
+      "message": "Successfully unlocked fish 2239e6d3-1acf-4d1d-bdae-8ea555989d5b",
+      "details": null,
+      "timestamp": "2025-08-30T18:41:38.811352"
+    },
+    {
+      "test": "Stats Endpoint",
+      "success": true,
+      "message": "Stats valid - Total: 150, Marine: 54, River: 48, Lake: 48, Catches: 1",
+      "details": null,
+      "timestamp": "2025-08-30T18:41:38.871411"
+    }
+  ]
+}
