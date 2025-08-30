@@ -55,7 +55,7 @@ FISH_DATABASE = [
     # PESCI MARINI (Mare)
     {"name": "Spigola", "scientificName": "Dicentrarchus labrax", "habitat": "mare", 
      "description": "Predatore marino molto apprezzato, si trova vicino alle coste rocciose e sabbiose.",
-     "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAg"},
+     "referenceImage": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNTBjMC0xMCAxMC0yMCAzMC0yMHM1MCAyMCA4MCAyMGMyMCAwIDQwLTEwIDYwLTEwczIwIDEwIDAiLz48L3N2Zz4="},
     
     {"name": "Orata", "scientificName": "Sparus aurata", "habitat": "mare",
      "description": "Pesce pregiato con caratteristica macchia dorata tra gli occhi, vive in fondali sabbiosi.",
